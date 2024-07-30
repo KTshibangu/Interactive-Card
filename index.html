@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="card">
+    <div class="left">
+      <img class="desktop" src="images/bg-main-desktop.png">
+      <img src="images/bg-main-mobile.png" alt="" class="mobile">
+      <div class="card-front-box">
+        <img src="images/bg-card-front.png" class="card-front" id="card-front">
+        <div class="circles">
+          <div class="big-circle"></div>
+          <div class="small-circle"></div>
+        </div>
+        <div id="card-number-el" class="card-number-el">
+          0000<span class="space"></span>0000<span class="space"></span>0000<span class="space"></span>0000</div>
+        <div id="card-holder-el" class="card-holder-el">Kevin Samuels</div>
+        <div id="date-el" class="date-el">00/00</div>
+      </div>
+      <div class="card-back-box">
+        <img src="images/bg-card-back.png" class="card-back" id="card-back">
+        <div id="cic-el" class="cic-el">000</div>
+      </div>
+    </div>
+    <div class="right">
+      <form class="form">
+        <div class="form-item">
+          <label for="name">CARDHOLDER NAME</label>
+          <div class="input-box">
+            <input type="text" class="card-name" id="card-name" placeholder="e.g. Kevin Samuels">
+          </div>
+          <p class="invalid-name" id="invalid-name">Letters only</p>
+        </div>
+
+        <div class="form-item">
+          <label for="name">CARD NUMBER</label>
+          <div class="input box">
+            <input type="number" class="card-number" id="card-number" placeholder="e.g. 123456789012">
+          </div>
+          <p class="invalid-number" id="invalid-number">Wrong format, numbers only</p>
+        </div>
+
+        <div class="form-item form-flex">
+          <div class="flex-items">
+            <label for="name">EXP. DATE (MM/YY)</label>
+            <div class="date-items">
+              <div class="date-items-box">
+                <input type="number" class="card-month" id="card-month" placeholder="MM">
+                <p class="invalid-month" id="invalid-month">Can't be blank</p>
+              </div>
+              <div class="date-items-box">
+                <input type="number" class="card-year" id="card-year" placeholder="YY">
+                <p class="invalid-year" id="invalid-year">Can't be blank</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-items">
+            <label for="name">CVC</label>
+            <div class="input-box">
+              <input type="number" class="card-cvc" id="card-cvc" placeholder="e.g. 123">
+            </div>
+            <p class="invalid-cvc" id="invalid-cvc">Can't be blank</p>
+          </div>
+        </div>
+        <div class="form-item">
+          <button type="submit" class="submit-btn" id="submit-btn">Confirm</button>
+        </div>
+      </form>
+      <div class="complete-form">
+        <img src="images/icon-complete.svg">
+        <h3>THANK YOU!</h3>
+        <p>We've added your card details</p>
+        <button type="submit" id="continue-btn">Continue</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
